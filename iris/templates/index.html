@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iris Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    .header{
+      background-color: rgb(108, 194, 88);
+      padding: 20px;
+      
+    }
+    .main{
+      color: aliceblue;
+      text-align: center;
+    }
+
+    
+      .bg11{
+        background-color: lightgrey;
+  width: 510px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  margin-left: 500px;
+  display: inline-block;
+
+      }
+   
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../static/css/iris.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+    <h5 class="main">Project IRIS Classification</h5>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="bg11 ">
+     
+    <form class="form-group" action="http://localhost:5000/predict" method="POST">
+      <label for="sepallength">Sepal Length :</label>
+      <input class="form-control" type="number"  step="0.01" name="sepallength">
+      <label for="sepalwidth">Sepal Width :</label>
+      <input class="form-control" type="number"  step="0.01"  name="sepalwidth">
+      <label for="petallength">Petal Length :</label>
+      <input class="form-control" type="number"  step="0.01"  name="petallength">
+      <label for="petalwidth">Petal Width :</label>
+      <input class="form-control" type="number"  step="0.01"  name="petalwidth">
+    </br>
+      <button class="btn btn-dark" type="submit" value="predict" name="predict">Submit</button>
+    </form>
+    
+    </div>
+   
+</body>
+</html>

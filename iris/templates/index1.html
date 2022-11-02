@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iris Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    .header{
+      background-color: rgb(108, 194, 88);
+      padding: 20px;
+      
+    }
+    .main{
+      color: aliceblue;
+      text-align: center;
+    }
+    .text{
+        text-align: center;
+        color: white;
+        background-color:green;
+        margin: 20px;
+        padding: 10px;
+        font-size:20px;
+    } 
+      .bg111{
+        background-color: lightgrey;
+  width: 500px;
+  border: 15px solid green;
+  padding: 30px;
+  margin: 20px;
+  margin-left: 500px;
+      }
+      p{
+        margin: 15px;
+      }
+      img{
+        margin: 10px;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../static/css/iris.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+    <h5 class="main">Project IRIS Classification</h5>
+    </div>
+
+    <br>
+    <br>
+
+    {% if setosa %}
+        <div class="bg111">
+            <div class="text">{{setosa}}</div>
+          <img src="../static/css/Irissetosa.jpg"  style="float:right;width:400px;height:300px;"> 
+        <p>Iris setosa, is a species in the genus Iris, it is also in the subgenus Limniris and in the series Tripetalae. It is a rhizomatous perennial from a wide range across the Arctic sea, including Alaska, Maine, Canada, Russia, northeastern Asia, China, Korea and southwards to Japan.</p>
+      {% elif versicolor %}
+        <div class="bg111"> 
+            <div class="text">{{virginica}}</div>
+             <img src="../static/css/irisvirginica.jpg"  style="float:right;width:400px;height:300px;"> 
+          <p>Iris versicolor is also commonly known as the blue flag, harlequin blueflag, larger blue flag, northern blue flag, and poison flag, plus other variations of these names, and in Britain and Ireland as purple iris. It is a species of Iris native to North America, in the Eastern United States and Eastern Canada.</p></div>
+      {% elif virginica %}
+        <div class="bg111">
+            <div class="text">{{versicolor}}</div>  
+            <img src="../static/css/irisversicolor.jpg"  style="float:right;width:400px;height:300px;">   
+
+          <p>Iris virginica, with the common name Virginia iris, is a perennial species of flowering plant, native to eastern North America. It is common along the coastal plain from Florida to Georgia in the Southeastern United States</p></div>
+      {% endif %}
+</body>
+</html>
